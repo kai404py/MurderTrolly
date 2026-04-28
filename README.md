@@ -17,10 +17,14 @@ The person thats setting these up is using more and more alaberate was to make i
 # Sprints
 
 ## Sprint 1
-| Task                                                      | Expected Time | Actual Time | Expected Effort | Actual Effort |
-|-----------------------------------------------------------|---------------|-------------|-----------------|---------------|
-| make some tracks for the trolly to go on                  | 1h            |             | 1               |               |
-| make a simple platform for the camera to go on the tracks | 5h            |             | 3               |               |
-| make the platform move forwards                           | 5h            |             | 5               |               |
-| registor player input for track 1 or 2                    | 8h            |             | 8               |               |
-| make the platform move on the correct track               | 10h           |             | 9               |               |
+| Task                                                      | Expected Time | Actual Time | Expected Effort | Actual Effort | Started At  | Compleated At |
+|-----------------------------------------------------------|---------------|-------------|-----------------|---------------|-------------|---------------|
+| make some tracks for the trolly to go on                  | 1h            | 0.5h        | 1               | 1             | 01:01 28/04 | 01:32 28/04   |
+| make a simple platform for the camera to go on the tracks | 5h            | 0.5h        | 3               | 2             | 01:32 28/04 | 02:04 28/04   |
+| Simple Demo UI                                            | 1h            | 0.5h        | 1               | 5             | 02:04 28/04 | 02:36 28/04   |
+| make the platform move forwards                           | 5h            |             | 5               |               |             |               |
+| registor player input for track 1 or 2                    | 8h            |             | 8               |               |             |               |
+| make the platform move on the correct track               | 10h           |             | 9               |               |             |               |
+
+Plan changes
+1. The camera only goes to the driver POV onces the player has locked in there choice other wise its top down
