@@ -345,7 +345,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 293773907}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1089687658}
+        m_TargetAssemblyTypeName: TrollyManager, Assembly-CSharp
+        m_MethodName: SetPath
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &293773907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1786,7 +1798,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1043515742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1089687658}
+        m_TargetAssemblyTypeName: TrollyManager, Assembly-CSharp
+        m_MethodName: SetPath
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1043515742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1843,13 +1867,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  pathChoise: 2
+  pathChoice: 1
   startPos: {fileID: 316132659}
   middlePos: {fileID: 1612483607}
   middle1Pos: {fileID: 169744558}
   middle2Pos: {fileID: 646401323}
   end1Pos: {fileID: 702250052}
   end2Pos: {fileID: 1130108755}
+  povCamera: {fileID: 1455020506}
+  topDownCamera: {fileID: 426288678}
 --- !u!1 &1130108754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,6 +2510,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401193254}
   m_CullTransparentMesh: 1
+--- !u!20 &1455020506 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 988100875762560184, guid: 8824cbb5ce31f96419369fc600b6864b, type: 3}
+  m_PrefabInstance: {fileID: 581632861624378900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1494606448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,7 +3240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 426376565646656584, guid: 8824cbb5ce31f96419369fc600b6864b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 988100875762560184, guid: 8824cbb5ce31f96419369fc600b6864b, type: 3}
       propertyPath: m_Enabled
