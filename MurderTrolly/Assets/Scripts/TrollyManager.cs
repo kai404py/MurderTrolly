@@ -19,6 +19,7 @@ public class TrollyManager : MonoBehaviour
     [SerializeField] private Canvas Buttons;
     [SerializeField] private Camera povCamera;
     [SerializeField] private Camera topDownCamera;
+    [SerializeField] private GameObject pointWork;
 
     void Start()
     {
@@ -29,12 +30,23 @@ public class TrollyManager : MonoBehaviour
     public void SetPath(int choice)
     {
         this.pathChoice = choice;
+        if (choice == 1)
+        {
+            pointWork.transform.rotation = Quaternion.Euler(0, -15.5f, 0);
+        } else if (choice == 2)
+        {
+            pointWork.transform.rotation = Quaternion.Euler(0, 15.5f, 0);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         float step =  speed * Time.deltaTime; // calculate distance to move
+
+        // a bit if statment that moves the trolly along the path, first to the middle, then to the middle of the chosen path, then to the end of the chosen path
+
+        // TODO: At middle rotate the trolly to face the direction of the chosen path
         if (!reachedMiddle)
         {
             transform.position = Vector3.MoveTowards(transform.position, middlePos.position, step);
@@ -47,6 +59,7 @@ public class TrollyManager : MonoBehaviour
             povCamera.gameObject.SetActive(true);
             topDownCamera.gameObject.SetActive(false);
             Buttons.gameObject.SetActive(false);
+
             if (pathChoice == 1)
             {
                 transform.position = Vector3.MoveTowards(transform.position, middle1Pos.position, step);
