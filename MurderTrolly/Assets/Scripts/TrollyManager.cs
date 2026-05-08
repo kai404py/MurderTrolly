@@ -16,7 +16,7 @@ public class TrollyManager : MonoBehaviour
     [SerializeField] private Transform middle2Pos;
     [SerializeField] private Transform end1Pos;
     [SerializeField] private Transform end2Pos;
-
+    [SerializeField] private Canvas Buttons;
     [SerializeField] private Camera povCamera;
     [SerializeField] private Camera topDownCamera;
 
@@ -46,6 +46,7 @@ public class TrollyManager : MonoBehaviour
         {
             povCamera.gameObject.SetActive(true);
             topDownCamera.gameObject.SetActive(false);
+            Buttons.gameObject.SetActive(false);
             if (pathChoice == 1)
             {
                 transform.position = Vector3.MoveTowards(transform.position, middle1Pos.position, step);
