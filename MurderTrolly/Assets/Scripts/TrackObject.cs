@@ -3,16 +3,38 @@ using UnityEngine;
 public class TrackObject : MonoBehaviour
 {
     [SerializeField] private int track;
-    [SerializeField] private bool shouldBeKilled;
-    [SerializeField] private GameObject gameManager;
+    [SerializeField] private GameObject Hud;
+
+    public string name;
+    public string[] passiveKillComments;
+    public string[] activeKillComments;
+    public bool isActiveKill = false;
+
+    private bool hasTriggered;
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision began with: " + collision.gameObject.name);
-        if (shouldBeKilled)
+        if (hasTriggered || !collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Object should be killed. Destroying: " + collision.gameObject.name);
-            Destroy(this.gameObject);
+            return;
+        }
+
+        hasTriggered = true;
+
+        var collider = GetComponent<Collider>();
+        if (collider != null)
+        {
+            collider.enabled = false;
+        }
+
+        var hud = Hud.GetComponent<hudManager>();
+        if (isActiveKill)
+        {
+            hud.StartCoroutine(hud.ShowKill(gameObject, track, name, activeKillComments));
+        }
+        else
+        {
+            hud.StartCoroutine(hud.ShowKill(gameObject, track, name, passiveKillComments));
         }
     }
 }

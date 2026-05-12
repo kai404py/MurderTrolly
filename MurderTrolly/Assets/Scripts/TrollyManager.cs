@@ -9,7 +9,6 @@ public class TrollyManager : MonoBehaviour
     private bool reachedPathMiddle = false;
     private bool reachedPathEnd = false;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private Transform startPos;
     [SerializeField] private Transform middlePos;
     [SerializeField] private Transform middle1Pos;
@@ -20,6 +19,8 @@ public class TrollyManager : MonoBehaviour
     [SerializeField] private Camera povCamera;
     [SerializeField] private Camera topDownCamera;
     [SerializeField] private GameObject pointWork;
+	[SerializeField] private GameObject LeftObject;
+	[SerializeField] private GameObject RightObject;
 
     void Start()
     {
@@ -30,6 +31,8 @@ public class TrollyManager : MonoBehaviour
     public void SetPath(int choice)
     {
         this.pathChoice = choice;
+        LeftObject.GetComponent<TrackObject>().isActiveKill = true;
+        RightObject.GetComponent<TrackObject>().isActiveKill = true;
         if (choice == 1)
         {
             pointWork.transform.rotation = Quaternion.Euler(0, -15.5f, 0);
@@ -42,11 +45,8 @@ public class TrollyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float step =  speed * Time.deltaTime; // calculate distance to move
+        float step =  speed * Time.deltaTime;
 
-        // a bit if statment that moves the trolly along the path, first to the middle, then to the middle of the chosen path, then to the end of the chosen path
-
-        // TODO: At middle rotate the trolly to face the direction of the chosen path
         if (!reachedMiddle)
         {
             transform.position = Vector3.MoveTowards(transform.position, middlePos.position, step);
