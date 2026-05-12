@@ -1346,7 +1346,7 @@ MonoBehaviour:
   activeKillComments:
   - I mean.
   - You save 3 people.
-  - You activly killed someone.
+  - You actively killed someone.
   - But you did save the others.
   isActiveKill: 0
 --- !u!54 &655895172

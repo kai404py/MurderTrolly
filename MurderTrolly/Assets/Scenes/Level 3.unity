@@ -607,7 +607,7 @@ MonoBehaviour:
   - Right?
   activeKillComments:
   - Ok why?
-  - There where going to bye.
+  - There where going to die.
   - But you just had to make sure.
   - You chose this.
   - Noted.
@@ -1898,7 +1898,7 @@ MonoBehaviour:
   lineDelay: 1.5
   cursorBlinkSpeed: 0.5
   startDelay: 0.5
-  nextLevel: 
+  nextLevel: End
 --- !u!1 &1130108754
 GameObject:
   m_ObjectHideFlags: 0
