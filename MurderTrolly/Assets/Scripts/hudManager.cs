@@ -24,6 +24,7 @@ public class hudManager : MonoBehaviour
         StartCoroutine(CursorBlink());
     }
 
+    // called by the track objects when they are collided with to show the kill comments and then load the next level
     public IEnumerator ShowKill(GameObject objectToDespawn, int track, string name, string[] killComments)
     {
         Destroy(objectToDespawn);
@@ -50,6 +51,7 @@ public class hudManager : MonoBehaviour
         }
     }
 
+    // plays the intro story by typing out each line, waiting, then deleting it before moving to the next line
     IEnumerator TypeLine(string line)
     {
         currentText = "";
@@ -63,6 +65,7 @@ public class hudManager : MonoBehaviour
         }
     }
 
+    // deletes the current line character by character with a delay between each character
     IEnumerator DeleteLine()
     {
         while (currentText.Length > 0)
@@ -73,6 +76,7 @@ public class hudManager : MonoBehaviour
         }
     }
 
+    // blinks the cursor on and off by toggling the showCursor boolean and updating the text
     IEnumerator CursorBlink()
     {
         while (true)

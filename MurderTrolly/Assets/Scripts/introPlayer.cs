@@ -27,6 +27,7 @@ public class IntroPlayer : MonoBehaviour
         StartCoroutine(PlayIntro());
     }
 
+    // plays the intro story by typing out each line, waiting, then deleting it before moving to the next line
     IEnumerator PlayIntro()
     {
         for (int i = 0; i < storyLines.Length; i++)
@@ -48,6 +49,7 @@ public class IntroPlayer : MonoBehaviour
         }
     }
 
+    // types out a line character by character with a delay between each character
     IEnumerator TypeLine(string line)
     {
         currentText = "";
@@ -61,6 +63,7 @@ public class IntroPlayer : MonoBehaviour
         }
     }
 
+    // deletes the current line character by character with a delay between each character
     IEnumerator DeleteLine()
     {
         while (currentText.Length > 0)
@@ -71,6 +74,7 @@ public class IntroPlayer : MonoBehaviour
         }
     }
 
+    // blinks the cursor on and off by toggling the showCursor boolean and updating the text
     IEnumerator CursorBlink()
     {
         while (true)
@@ -81,6 +85,7 @@ public class IntroPlayer : MonoBehaviour
         }
     }
 
+    // updates the text in the text box to the current text plus a cursor that is either visible or invisible based on the showCursor boolean
     void UpdateText()
     {
         string cursor = showCursor ? "|" : "<color=#00000000>|</color>";
