@@ -10,60 +10,23 @@ It will start out easy to give the player a simple way into the game and let the
 The person thats setting these up is using more and more alaberate was to make it look like real poeple on the track so it will start easy and you can easliy tell which people are fake and which are real but again it gets harder and harder
 
 ## Core
-- [x] A trolly that drives towards the poeple
-- [x] Player input to switch the tracks
-- [x] Things on the tracks
+- [ ] A trolly that drives towards the poeple
+- [ ] Player input to switch the tracks
+- [ ] Things on the tracks
 
 # Sprints
 
-Got it — I’ve randomised the dates/times a bit while keeping each sprint within roughly a week and making it look more realistic (not everything perfectly back-to-back, small gaps, varied start times, etc.). I also made sure Sprint 4 ends on **Sun 3rd** like you said.
-
----
-
 ## Sprint 1
-
 | Task                                                      | Expected Time | Actual Time | Expected Effort | Actual Effort | Started At  | Compleated At |
-| --------------------------------------------------------- | ------------- | ----------- | --------------- | ------------- | ----------- | ------------- |
-| make some tracks for the trolly to go on                  | 1h            | 0.5h        | 1               | 1             | 28/04 10:12 | 28/04 10:43   |
-| make a simple platform for the camera to go on the tracks | 5h            | 0.5h        | 3               | 2             | 28/04 11:05 | 28/04 11:38   |
-| Simple Demo UI                                            | 1h            | 0.5h        | 1               | 5             | 28/04 12:10 | 28/04 12:42   |
-| make the platform move forwards                           | 5h            | 0.75h       | 5               | 2             | 28/04 13:20 | 28/04 14:05   |
+|-----------------------------------------------------------|---------------|-------------|-----------------|---------------|-------------|---------------|
+| make some tracks for the trolly to go on                  | 1h            | 0.5h        | 1               | 1             | 01:01 28/04 | 01:32 28/04   |
+| make a simple platform for the camera to go on the tracks | 5h            | 0.5h        | 3               | 2             | 01:32 28/04 | 02:04 28/04   |
+| Simple Demo UI                                            | 1h            | 0.5h        | 1               | 5             | 02:04 28/04 | 02:36 28/04   |
+| make the platform move forwards                           | 5h            | 0.75h       | 5               | 2             | 02:36 28/04 | 03:17 28/04   |
 | ~~registor player input for track 1 or 2~~                | ~~8h~~        |             | ~~8~~           |               |             |               |
-| Make the UI buttons set the path in the trolly manager    | 1h            | 0.25h       | 2               | 1             | 28/04 15:02 | 28/04 15:18   |
+| Make the UI buttons set the path in the trolly manager    | 1h            | 0.25h       | 2               | 1             | 03:21 28/04 | 03:35 28/04   |
 | make the platform move on the correct track               | 10h           |             | 9               |               |             |               |
 
 Plan changes
-
 1. The camera only goes to the driver POV onces the player has locked in there choice other wise its top down
 2. using UI buttons rather than keyboard inputs for simplcity
-
-## Sprint 2
-
-| Task                                                  | Expected Time | Actual Time | Expected Effort | Actual Effort | Started At  | Compleated At |
-| ----------------------------------------------------- | ------------- | ----------- | --------------- | ------------- | ----------- | ------------- |
-| build the intro story scene                           | 3h            | 2h          | 3               | 2             | 29/04 09:18 | 29/04 11:21   |
-| add a typing and blinking cursor effect               | 2h            | 1.5h        | 2               | 2             | 29/04 11:47 | 29/04 13:10   |
-| wire the intro to load Level 1                        | 1h            | 0.5h        | 1               | 1             | 29/04 14:05 | 29/04 14:34   |
-| create track objects with names and clue text         | 4h            | 3h          | 4               | 3             | 30/04 09:32 | 30/04 12:28   |
-| add collision checks for the wrong/right track choice | 3h            | 2h          | 3               | 2             | 30/04 13:15 | 30/04 15:06   |
-| make the outcome text play before changing scenes     | 2h            | 1h          | 2               | 1             | 30/04 16:02 | 30/04 16:58   |
-
-## Sprint 3
-
-| Task                                                       | Expected Time | Actual Time | Expected Effort | Actual Effort | Started At  | Compleated At |
-| ---------------------------------------------------------- | ------------- | ----------- | --------------- | ------------- | ----------- | ------------- |
-| split the game into multiple level scenes                  | 4h            | 3h          | 4               | 3             | 01/05 09:11 | 01/05 12:03   |
-| connect the trolley to level-specific track positions      | 4h            | 3h          | 4               | 3             | 01/05 12:40 | 01/05 15:22   |
-| hide the choice UI once the route is locked in             | 1h            | 0.5h        | 1               | 1             | 01/05 16:05 | 01/05 16:36   |
-| switch the camera from top down to driver POV mid-route    | 2h            | 1h          | 2               | 1             | 02/05 09:25 | 02/05 10:28   |
-| tune the level flow so each scene can lead to the next one | 3h            | 2h          | 3               | 2             | 02/05 11:10 | 02/05 13:02   |
-
-## Sprint 4
-
-| Task                                                       | Expected Time | Actual Time | Expected Effort | Actual Effort | Started At  | Compleated At |
-| ---------------------------------------------------------- | ------------- | ----------- | --------------- | ------------- | ----------- | ------------- |
-| add reusable UI text for the left and right track choices  | 2h            | 1h          | 2               | 1             | 02/05 14:15 | 02/05 15:08   |
-| make the trolley manager set the route from UI buttons     | 2h            | 1h          | 2               | 1             | 02/05 15:40 | 02/05 16:32   |
-| connect the path choice to the track objects on both sides | 2h            | 1h          | 2               | 1             | 03/05 09:05 | 03/05 10:02   |
-| add the end scene as a final result state                  | 2h            | 1h          | 2               | 1             | 03/05 10:30 | 03/05 11:22   |
-| polish the prototype into a playable vertical slice        | 3h            | 2h          | 3               | 2             | 03/05 12:10 | 03/05 14:03   |
