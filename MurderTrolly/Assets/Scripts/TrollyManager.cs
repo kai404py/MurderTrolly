@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class TrollyManager : MonoBehaviour
 {
@@ -21,13 +22,21 @@ public class TrollyManager : MonoBehaviour
     [SerializeField] private GameObject pointWork;
 	[SerializeField] private GameObject LeftObject;
 	[SerializeField] private GameObject RightObject;
+    [SerializeField] private TextMeshProUGUI leftText;
+    [SerializeField] private TextMeshProUGUI rightText;
 
     void Start()
     {
+        // set initial position to start
         povCamera.gameObject.SetActive(false);
         topDownCamera.gameObject.SetActive(true);
+
+        // set the text of the buttons to the names of the objects
+        leftText.text = LeftObject.GetComponent<TrackObject>().name;
+        rightText.text = RightObject.GetComponent<TrackObject>().name;
     }
     
+    // called by the buttons to set the path choice and start moving
     public void SetPath(int choice)
     {
         this.pathChoice = choice;
@@ -42,7 +51,8 @@ public class TrollyManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // move the trolly along the path based on the path choice
+    // yes it should be switch case but i do not have the time
     void Update()
     {
         float step =  speed * Time.deltaTime;
