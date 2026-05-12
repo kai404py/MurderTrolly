@@ -6,35 +6,10 @@ public class TrackObject : MonoBehaviour
     [SerializeField] private GameObject Hud;
 
     public string name;
-    public string[] passiveKillComments;
-    public string[] activeKillComments;
-    public bool isActiveKill = false;
-
-    private bool hasTriggered;
+    public string[] killComments;
 
     void OnCollisionEnter(Collision collision)
     {
-        if (hasTriggered || !collision.gameObject.CompareTag("Player"))
-        {
-            return;
-        }
-
-        hasTriggered = true;
-
-        var collider = GetComponent<Collider>();
-        if (collider != null)
-        {
-            collider.enabled = false;
-        }
-
-        var hud = Hud.GetComponent<hudManager>();
-        if (isActiveKill)
-        {
-            hud.StartCoroutine(hud.ShowKill(gameObject, track, name, activeKillComments));
-        }
-        else
-        {
-            hud.StartCoroutine(hud.ShowKill(gameObject, track, name, passiveKillComments));
-        }
+        Hud.GetComponent<hudManager>().ShowKill(track, name, killComments);
     }
 }

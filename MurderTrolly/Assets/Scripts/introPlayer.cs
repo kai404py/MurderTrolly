@@ -42,7 +42,7 @@ public class IntroPlayer : MonoBehaviour
             }
         }
 
-        if (!end)
+        if (!end
         {
             SceneManager.LoadScene("Level 1");
         }

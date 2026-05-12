@@ -3,7 +3,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class hudManager : MonoBehaviour
+public class IntroPlayer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textBox;
 
@@ -13,8 +13,7 @@ public class hudManager : MonoBehaviour
     [SerializeField] private float deletingSpeed = 0.03f;
     [SerializeField] private float lineDelay = 1.5f;
     [SerializeField] private float cursorBlinkSpeed = 0.5f;
-    [SerializeField] private float startDelay = 0.5f;
-    [SerializeField] private string nextLevel = "";
+    [SerializeField] private float startDelay = 0.5f; // NEW
 
     private string currentText = "";
     private bool showCursor = true;
@@ -24,10 +23,8 @@ public class hudManager : MonoBehaviour
         StartCoroutine(CursorBlink());
     }
 
-    public IEnumerator ShowKill(GameObject objectToDespawn, int track, string name, string[] killComments)
+    IEnumerator ShowKill(int track, string name, string[] killComments)
     {
-        Destroy(objectToDespawn);
-
         for (int i = 0; i < killComments.Length; i++)
         {
             yield return new WaitForSeconds(startDelay);
@@ -39,15 +36,9 @@ public class hudManager : MonoBehaviour
             {
                 yield return StartCoroutine(DeleteLine());
             }
-            
-            if (i == killComments.Length - 1)
-            {
-                yield return StartCoroutine(DeleteLine());
-                yield return StartCoroutine(TypeLine("Ok let's move on..."));
-                yield return new WaitForSeconds(lineDelay);
-                SceneManager.LoadScene(nextLevel);
-            }
         }
+
+        SceneManager.LoadScene("Level 1");
     }
 
     IEnumerator TypeLine(string line)
