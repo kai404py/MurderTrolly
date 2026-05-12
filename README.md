@@ -48,6 +48,10 @@ Plan changes
 | add collision checks for the wrong/right track choice | 3h            | 2h          | 3               | 2             | 30/04 13:15 | 30/04 15:06   |
 | make the outcome text play before changing scenes     | 2h            | 1h          | 2               | 1             | 30/04 16:02 | 30/04 16:58   |
 
+Plan changes
+
+1. why and i tring to crame a muder mistory story into the trolly problem it its self is a story
+
 ## Sprint 3
 
 | Task                                                       | Expected Time | Actual Time | Expected Effort | Actual Effort | Started At  | Compleated At |
