@@ -14,7 +14,9 @@ public class IntroPlayer : MonoBehaviour
     [SerializeField] private float deletingSpeed = 0.03f;
     [SerializeField] private float lineDelay = 1.5f;
     [SerializeField] private float cursorBlinkSpeed = 0.5f;
-    [SerializeField] private float startDelay = 0.5f; // NEW
+    [SerializeField] private float startDelay = 0.5f;
+
+    [SerializeField] private bool end = false;
 
     private string currentText = "";
     private bool showCursor = true;
@@ -40,7 +42,10 @@ public class IntroPlayer : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene("Level 1");
+        if (!end)
+        {
+            SceneManager.LoadScene("Level 1");
+        }
     }
 
     IEnumerator TypeLine(string line)

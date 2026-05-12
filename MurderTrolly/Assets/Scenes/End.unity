@@ -831,28 +831,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 1116821992}
   storyLines:
-  - Welcome To The Trolley Problem
-  - A trolley is speeding down the track.
-  - Five people are tied to the tracks ahead.
-  - You stand beside a lever.
-  - Pull it, and the trolley switches tracks.
-  - You would save five people.
-  - But there is one problem.
-  - There is one person on the other track.
-  - What do you do?
-  - 'Pull the lever,
-
-    and kill one person to save five?'
-  - Or do nothing...
-  - Watch.
-  - "You didn\u2019t kill them."
-  - Did you?
-  - You just watched.
+  - Thanks for playing.
+  - You defo killed some people.
+  - Anyway.
+  - Good bye.
   typingSpeed: 0.05
   deletingSpeed: 0.03
   lineDelay: 1.5
   cursorBlinkSpeed: 0.5
   startDelay: 0.5
+  end: 1
 --- !u!4 &621413490
 Transform:
   m_ObjectHideFlags: 0
